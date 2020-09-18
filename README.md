@@ -9,3 +9,17 @@ This is an efficient Nearest Neighbour Classifier for classifying images of hand
     The MNIST dataset <a href="http://yann.lecun.com/exdb/mnist/">(http://yann.lecun.com/exdb/mnist/)</a> has been a landmark dataset in Machine Learning and Pattern Recognition. It consists of more than 70,000 grayscale images of handwritten numeric digit, divided into a train set (of 60,000 images) and a test dataset (10,000 images). Each image has a fixed dimension of 28x28 pixels. Each image comes labelled with one of the 10 possible classes (0-9).
     Over the years this dataset has been used for testing many Convolutional Neural Networks and algorithms Machine Learning and Computer Vision.
 </p>
+
+<h2 id="acknowledgement">Acknowledgement</h2>
+<p align="justify">
+I referred the following research papers, articles and course lectures while working on this project-
+</p>
+<ul>
+    <li> http://web.cs.iastate.edu/~honavar/nndatastructures.pdf </li>
+    <li> http://stevehanov.ca/blog/?id=130 </li>
+    <li> https://en.wikipedia.org/wiki/Vantage-point_tree </li>
+    <li> https://www.cs.toronto.edu/~urtasun/courses/CSC411_Fall16/05_nn.pdf </li>
+    <li> https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm </li>
+    <li> https://courses.cs.washington.edu/courses/cse373/02au/lectures/lecture22l.pdf </li>
+    <li> http://vlm1.uta.edu/~athitsos/nearest_neighbors/ </li>
+</ul>
