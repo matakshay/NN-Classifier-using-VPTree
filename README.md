@@ -17,6 +17,13 @@ This is an efficient Nearest Neighbour Classifier for classifying images of hand
     Classification is a fundamental task in Machine Learning. Given a labelled dataset of points and their classes, classification essentially involved using this dataset to identify the class for each query point. Classification tasks, in general can involve more than two classes as well (multi-class classification). This project, for example involves 10 classes (digits 0-9).
 </p>
 
+<h2 id="algo">k-Nearest Neighbours Algorithm</h2>
+<p align="justify">
+    The k-NN Algorithm is one of the classic base-line algorithms in Machine Learning and Pattern Recognition. Due to its simple structure and implementation, it is often the first approach adopted in most classification problems, before more sophisticated techniques are considered.
+    <br>
+    The traditional algorithm has a test time complexity which is linear in the size of the train dataset (assuming k is much smaller than the size of training set) for each query. For large dataset, this approach can become computationally much expensive. Here we consider an efficient k-NN algorithm which uses a VP Tree data structure to pre-process and store the train data in such a manner, so that during test time, the nearest neighbour for a query can be obtained much more quickly. With this optimised approach, test time complexity per query can be improved to become logarithmic in the size of train dataset.
+</p>
+
 <h2 id="dataset"> Dataset </h2>
 <p align="justify">
     The MNIST dataset <a href="http://yann.lecun.com/exdb/mnist/">(http://yann.lecun.com/exdb/mnist/)</a> has been a landmark dataset in Machine Learning and Pattern Recognition. It consists of more than 70,000 grayscale images of handwritten numeric digit, divided into a train set (of 60,000 images) and a test dataset (10,000 images). Each image has a fixed dimension of 28x28 pixels. Each image comes labelled with one of the 10 possible classes (0-9).
