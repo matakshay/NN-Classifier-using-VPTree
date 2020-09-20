@@ -24,6 +24,20 @@ This is an efficient Nearest Neighbour Classifier for classifying images of hand
     The traditional algorithm has a test time complexity which is linear in the size of the train dataset (assuming k is much smaller than the size of training set) for each query. For large dataset, this approach can become computationally much expensive. Here we consider an efficient k-NN algorithm which uses a VP Tree data structure to pre-process and store the train data in such a manner, so that during test time, the nearest neighbour for a query can be obtained much more quickly. With this optimised approach, test time complexity per query can be improved to become logarithmic in the size of train dataset.
 </p>
 
+<h2 id="VPTree"> VP Tree </h2>
+<p align="justify">
+    Vantage-Point tree (or VP Tree) is an example of a metric tree. Metric trees are useful for storing data points defined in a metric space. At each level, a VP Tree divides the data points into two sub-parts, according to their similarity (or distance) from a chosen vantage point. Points where are closer to the vantage point than a threshold are store in the left subtree, while the remaining data points are stored in the right subtree. In this way, the entire dataset is stored in the tree by successively diving it into two halves at each node. The leaf nodes essentially contain a single data point.
+    <br>
+    While searching for the nearest neighbour of a query point, the recursive process starts from the root node. At each level, based of the values of threshold distance (for that node), distance of query point from vantage point (of that node) and the distances of the points encountered till that instant, the algorithm decides in which of the sub-trees to enter. This recursive techniques greatly reduces the number of distance comparisons needed and in turn improved the query time complexity.
+    <br>
+    A key hyperparameter of choice here, is the distance metric to be used for comparing the similarity between two data points. Here I experimented with three different metric and obtained the following results-
+    <ul>
+        <li> Using <b>Manhattan distance</b> as the metric gave an accuracy of <i>96.31%</i> </li>
+        <li> <b>Euclidean distance</b> gave the highest accuracy of <i>96.91%</i></li>
+        <li> Using <b>Chebyshev distance</b> metric gave an accuracy of <i>79.62%</i></li>
+    </ul>
+</p>
+
 <h2 id="dataset"> Dataset </h2>
 <p align="justify">
     The MNIST dataset <a href="http://yann.lecun.com/exdb/mnist/">(http://yann.lecun.com/exdb/mnist/)</a> has been a landmark dataset in Machine Learning and Pattern Recognition. It consists of more than 70,000 grayscale images of handwritten numeric digit, divided into a train set (of 60,000 images) and a test dataset (10,000 images). Each image has a fixed dimension of 28x28 pixels. Each image comes labelled with one of the 10 possible classes (0-9).
