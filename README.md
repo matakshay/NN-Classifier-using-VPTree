@@ -44,6 +44,29 @@ This is an efficient Nearest Neighbour Classifier for classifying images of hand
     Over the years this dataset has been used for testing many Convolutional Neural Networks and algorithms Machine Learning and Computer Vision.
 </p>
 
+<h2 id="usage">Usage</h2>
+<ol>
+    <li>
+        Clone the repository to your system and head over to it <br>
+        <code> git clone https://github.com/matakshay/NN-Classifier-using-VPTree</code> <br>
+        <code> cd NN-Classifier-using-VPTree </code>
+    </li>
+    <li>
+        Before moving to the next step, ensure that JDK version 11.0.5 has been installed on the system
+    </li>
+    <li>
+        Compile the project <br>
+        <code> javac -Xlint:unchecked NNClassifier/Main.java </code>
+    </li>
+    <li>
+        Execute the code with the following command. This will read the dataset, build the classifier & construct a VP Tree (using the 60,000 images from train set), use the test set images to obtain the predictions and lastly will compute the accuracy of the classifier over the test set.
+        <br>
+        <code> java NNClassifier/Main </code>
+        <br>
+        By default it uses the l2 metric (Euclidean distance) for computing the similarity between two images. One can pass "l1", "linf" as a command-line argument (while executing the code) to set the metric to l1 (Manhattan distance) or linf (Chebyshev distance) respectively.
+    </li>
+</ol>
+
 <h2 id="acknowledgement">Acknowledgement</h2>
 <p align="justify">
 I referred the following research papers, articles and course lectures while working on this project-
