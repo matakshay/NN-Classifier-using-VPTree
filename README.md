@@ -4,6 +4,16 @@
 This is an efficient Nearest Neighbour Classifier for classifying images of handwritten digit from the MNIST dataset. It uses a VP Tree to pre-process the images, thus reducing query time complexity. This project was done as part of the Data Structures & Algorithms course at IIT Delhi.
 </p>
 
+<h3> TABLE OF CONTENTS </h3>
+<ol type="I">
+    <li><a href="#intro"> Introduction </a></li>
+    <li><a href="#algo"> k-NN Algorithm </a></li>
+    <li><a href="#VPTree"> VP Tree </a></li>
+    <li><a href="#dataset"> Dataset </a></li>
+    <li><a href="#usage"> Usage </a></li>
+    <li><a href="#acknowledgement"> Acknowledgement </a></li>
+</ol>
+
 <h2 id="intro">Introduction</h2>
 <p align="center">
 <figure>
