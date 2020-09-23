@@ -1,5 +1,12 @@
 <h1>Nearest Neighbour Classifier using VP Tree</h1>
 
+<p align="center">
+<img src="https://img.shields.io/badge/made%20by%20-matakshay-blue">
+<img src="https://img.shields.io/badge/java-11.0.5-orange">
+<img src="https://img.shields.io/badge/contributions-welcome-brightgreen">
+<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103">
+</p>
+
 <p align="justify">
 This is an efficient Nearest Neighbour Classifier for classifying images of handwritten digit from the MNIST dataset. It uses a VP Tree to pre-process the images, thus reducing query time complexity. This project was done as part of the Data Structures & Algorithms course at IIT Delhi.
 </p>
